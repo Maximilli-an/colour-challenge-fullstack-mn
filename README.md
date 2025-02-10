@@ -41,3 +41,9 @@ Adjusted base url and invalid url inputs for the server path
 Keen to build some basic tests for generating colour types - I haven't used bun before but docs suggest bun:test can do this and i'd like to give it a whirl
 
 Once combined all resources to single repo - moving to frontend after a short break
+
+Frontend side - component and api interaction sorted
+
+Had some any typing related errors (so fair TS you right) tied Colour type from backend over to frontend for better JSON Parsing / validation of type recieved
+
+at this point the word Colour is starting to look strange to me.
