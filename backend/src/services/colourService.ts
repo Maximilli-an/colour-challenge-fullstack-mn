@@ -21,6 +21,6 @@ export const getRandomColour = (): Colour => {
   return generators[Math.floor(Math.random() * generators.length)]();
 };
 
-//swatch generates 5 random colours as if it was a standard 5 colour swatch/pallette (this was not specified in reqs so may make dynamic and take a size property)
+//swatch generates 5 random colours that are unrelated - extension potential to make relatable colours
 export const getRandomColourSwatch = (): Colour[] =>
   Array.from({ length: 5 }, getRandomColour);
