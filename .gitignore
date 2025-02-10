@@ -1,0 +1,28 @@
+node_modules/
+bun.lockb
+dist/
+build/
+*.log
+
+.vscode/
+# .DS_Store if MAC - currently building this project on Windows64
+
+Thumbs.db
+*.swp
+*.bak
+
+#FE ignores
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.next/
+/frontend/.parcel-cache/
+
+#BE Ignores
+/backend/node_modules/
+/backend/dist/
+
+#Windows ignores
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.tmp
