@@ -1,13 +1,13 @@
 import type { RGBColour, HSLColour, Colour } from "../types/colourTypes";
 
-const getRandomRGB = (): RGBColour => ({
+export const getRandomRGB = (): RGBColour => ({
   type: "rgb",
   red: Math.floor(Math.random() * 256),
   green: Math.floor(Math.random() * 256),
   blue: Math.floor(Math.random() * 256),
 });
 
-const getRandomHSL = (): HSLColour => ({
+export const getRandomHSL = (): HSLColour => ({
   type: "hsl",
   hue: Math.floor(Math.random() * 361),
   saturation: Math.floor(Math.random() * 101),
