@@ -1,0 +1,26 @@
+import type { RGBColour, HSLColour, Colour } from "../types/colourTypes";
+
+const getRandomRGB = (): RGBColour => ({
+  type: "rgb",
+  red: Math.floor(Math.random() * 256),
+  green: Math.floor(Math.random() * 256),
+  blue: Math.floor(Math.random() * 256),
+});
+
+const getRandomHSL = (): HSLColour => ({
+  type: "hsl",
+  hue: Math.floor(Math.random() * 361),
+  saturation: Math.floor(Math.random() * 101),
+  lightness: Math.floor(Math.random() * 101),
+});
+
+//add BGRB here for extension
+
+export const getRandomColour = (): Colour => {
+  const generators = [getRandomRGB, getRandomHSL];
+  return generators[Math.floor(Math.random() * generators.length)]();
+};
+
+//swatch generates 5 random colours as if it was a standard 5 colour swatch/pallette (this was not specified in reqs so may make dynamic and take a size property)
+export const getRandomColourSwatch = (): Colour[] =>
+  Array.from({ length: 5 }, getRandomColour);
