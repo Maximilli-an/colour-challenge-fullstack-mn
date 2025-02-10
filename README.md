@@ -49,3 +49,8 @@ Had some any typing related errors (so fair TS you right) tied Colour type from 
 at this point the word Colour is starting to look strange to me.
 
 Stopping for tonight, next step is writing tests for the frontend, double checking Type strength on the backend, add BGRB, styling for FE, etc.
+
+Did some testing after I "stopped" - realised I was having CORS problems.
+Decided instead of taking the easy way out with proxies since I havent used Vite any more than Next - i'd switch to Next since the old GET formula for API calls is similar to what i've done in other HTTP Web Frameworks
+
+Teething pain with api/routing and naming conventions in next, but using /api/colours with a route.ts is kinda cool - I do wish it could be a little more 'decoupled' than this, but overall once i learnt this, everything was fixed quickly.

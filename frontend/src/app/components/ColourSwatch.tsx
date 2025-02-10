@@ -1,6 +1,8 @@
+"use client"
+
 import { useState, useEffect } from "react";
-import { fetchColours } from "../api/colourService";
-import { Colour } from "../../../backend/src/types/colourTypes"
+import { fetchColours } from "../serviceHandler/colourService";
+import { Colour } from "../../../../backend/src/types/colourTypes"
 
 const ColourSwatch = () => {
     const [colours, setColours] = useState<Colour[]>([]);
