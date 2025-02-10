@@ -47,3 +47,5 @@ Frontend side - component and api interaction sorted
 Had some any typing related errors (so fair TS you right) tied Colour type from backend over to frontend for better JSON Parsing / validation of type recieved
 
 at this point the word Colour is starting to look strange to me.
+
+Stopping for tonight, next step is writing tests for the frontend, double checking Type strength on the backend, add BGRB, styling for FE, etc.
