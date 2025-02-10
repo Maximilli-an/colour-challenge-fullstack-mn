@@ -6,13 +6,22 @@ const PORT = 3000;
 serve({
   port: PORT,
   fetch(req) {
-    if (req.url.endsWith("/colours")) {
+    const url = new URL(req.url, `http://${req.headers.get("host")}`)
+
+    if (url.pathname === "/colours") {
       return new Response(JSON.stringify(getRandomColourSwatch()), {
         headers: { "Content-Type": "application/json" },
       });
     }
 
-    return new Response("Not Found", { status: 404 });
+    if (url.pathname === "/") {
+        return new Response("This is the root landing for the Colour API. Please poll /colours for a 5 colour swatch.", {
+          headers: { "Content-Type": "text/plain" },
+        });
+      }
+
+      //if invalid path input
+    return new Response("The path you are looking for is not available at this time", { status: 404 });
   },
 });
 
