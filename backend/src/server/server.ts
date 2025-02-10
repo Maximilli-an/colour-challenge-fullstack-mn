@@ -1,4 +1,4 @@
-import serve from "bun";
+import { serve } from "bun";
 import { getRandomColourSwatch } from "../services/colourService";
 
 const PORT = 3000;
