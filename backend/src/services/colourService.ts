@@ -1,4 +1,4 @@
-import type { RGBColour, HSLColour, Colour } from "../types/colourTypes";
+import type { RGBColour, HSLColour, Colour, BRGBColour } from "../types/colourTypes";
 
 export const getRandomRGB = (): RGBColour => ({
   type: "rgb",
@@ -14,10 +14,15 @@ export const getRandomHSL = (): HSLColour => ({
   lightness: Math.floor(Math.random() * 101),
 });
 
-//add BGRB here for extension
+export const getRandomBRGB = (): BRGBColour => ({
+  type: "brgb",
+  red: Math.floor(Math.random() * 10001),
+  green: Math.floor(Math.random() * 10001),
+  blue: Math.floor(Math.random() * 10001),
+});
 
 export const getRandomColour = (): Colour => {
-  const generators = [getRandomRGB, getRandomHSL];
+  const generators = [getRandomRGB, getRandomHSL, getRandomBRGB];
   return generators[Math.floor(Math.random() * generators.length)]();
 };
 
