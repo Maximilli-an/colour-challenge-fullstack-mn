@@ -8,9 +8,9 @@ global.fetch = jest.fn(() =>
       Promise.resolve([
         { type: "rgb", red: 255, green: 0, blue: 0 },
         { type: "hsl", hue: 120, saturation: 100, lightness: 50 },
-        { type: "brgb", red: 10000, green: 5000, blue: 7500 }, // New type!
+        { type: "brgb", red: 10000, green: 5000, blue: 7500 }, // Extension type
         { type: "rgb", red: 0, green: 255, blue: 255 },
-        { type: "hsl", hue: 300, saturation: 50, lightness: 40 },
+        { type: "hsl", hue: 300, saturation: 50, lightness: 40 }
       ]),
   } as Response)
 ) as jest.MockedFunction<typeof fetch>;
@@ -19,7 +19,7 @@ global.fetch = jest.fn(() =>
 const colourValidators: Record<string, (colour: any) => boolean> = {
   rgb: (colour) => "red" in colour && "green" in colour && "blue" in colour,
   hsl: (colour) => "hue" in colour && "saturation" in colour && "lightness" in colour,
-  brgb: (colour) => "red" in colour && "green" in colour && "blue" in colour, // Extendable!
+  brgb: (colour) => "red" in colour && "green" in colour && "blue" in colour, //Extension
 };
 
 //happy path
