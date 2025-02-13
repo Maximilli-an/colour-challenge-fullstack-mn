@@ -8,4 +8,4 @@ export default {
     },
     extensionsToTreatAsEsm: [".ts", ".tsx"], // used AI help for debugging this - Jest and Bun were having an argument
   };
-  
+  2
